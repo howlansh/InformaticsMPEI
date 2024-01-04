@@ -57,10 +57,10 @@ begin
   n:=StrToInt(Edit1.Text);
   Val(Edit1.Text,n,k);
   If k<>0 then
-    ShowMessage('Введено не число! Повторите ввод')
+    ShowMessage('Р’РІРµРґРµРЅРѕ РЅРµ С‡РёСЃР»Рѕ! РџРѕРІС‚РѕСЂРёС‚Рµ РІРІРѕРґ')
   else
     If n<=0 then
-      ShowMessage('Введите положительное число')
+      ShowMessage('Р’РІРµРґРёС‚Рµ РїРѕР»РѕР¶РёС‚РµР»СЊРЅРѕРµ С‡РёСЃР»Рѕ')
     else
       begin
         StringGrid1.RowCount:=n+1;
@@ -89,22 +89,22 @@ for i:=0 to (n-1) do
       a[i].x:=StrToInt(StringGrid1.Cells[1,i+1]);
    Val(StringGrid1.Cells[1,i+1],a[i].x,g);
   If g<>0 then
-    ShowMessage('Введено не число! Повторите ввод');
+    ShowMessage('Р’РІРµРґРµРЅРѕ РЅРµ С‡РёСЃР»Рѕ! РџРѕРІС‚РѕСЂРёС‚Рµ РІРІРѕРґ');
         a[i].y:=StrToInt(StringGrid1.Cells[2,i+1]);
     Val(StringGrid1.Cells[2,i+1],a[i].y,g);
   If g<>0 then
-    ShowMessage('Введено не число! Повторите ввод');
+    ShowMessage('Р’РІРµРґРµРЅРѕ РЅРµ С‡РёСЃР»Рѕ! РџРѕРІС‚РѕСЂРёС‚Рµ РІРІРѕРґ');
   end;
 for i:=0 to 2 do
   begin
     t[i].x:=StrToInt(StringGrid2.Cells[1,i+1]);
         Val(StringGrid2.Cells[1,i+1],t[i].x,g);
   If g<>0 then
-    ShowMessage('Введено не число! Повторите ввод');
+    ShowMessage('Р’РІРµРґРµРЅРѕ РЅРµ С‡РёСЃР»Рѕ! РџРѕРІС‚РѕСЂРёС‚Рµ РІРІРѕРґ');
     t[i].y:=StrToInt(StringGrid2.Cells[2,i+1]);
         Val(StringGrid2.Cells[2,i+1],t[i].y,g);
   If g<>0 then
-    ShowMessage('Введено не число! Повторите ввод');
+    ShowMessage('Р’РІРµРґРµРЅРѕ РЅРµ С‡РёСЃР»Рѕ! РџРѕРІС‚РѕСЂРёС‚Рµ РІРІРѕРґ');
   end;
   for i := 0 to n-1 do
    for j := i+1 to n-1 do
@@ -127,10 +127,10 @@ for i:=0 to 2 do
      End;
     end;
      if k=0 then
-     Label5.Caption:='Нет таких прямоугольников'
+     Label5.Caption:='РќРµС‚ С‚Р°РєРёС… РїСЂСЏРјРѕСѓРіРѕР»СЊРЅРёРєРѕРІ'
      else
       begin
-        Label5.Caption:='Точки:';
+        Label5.Caption:='РўРѕС‡РєРё: ';
         Label6.Caption:= IntToStr(index1+1);
         Label7.Caption:= IntToStr(index2+1);
       end;
@@ -192,7 +192,7 @@ Begin
    s:=SaveDialog1.FileName;
    AssignFile(f,s);
    Rewrite(f);
-   writeln(f,'Координаты диагонали наименьшего прямоугольника');
+   writeln(f,'РљРѕРѕСЂРґРёРЅР°С‚С‹ РґРёР°РіРѕРЅР°Р»Рё РЅР°РёРјРµРЅСЊС€РµРіРѕ РїСЂСЏРјРѕСѓРіРѕР»СЊРЅРёРєР°');
    write(f,'A=(',IntToStr(a[index1].x),';',IntToStr(a[index1].y),')');
    writeln(f);
    write(f, 'B=(',IntToStr(a[index2].x),';',IntToStr(a[index2].y),')');
